@@ -1,0 +1,16 @@
+<div class="container m-5">
+  <div class="row">
+    <div class="col-md-12">
+      <form>
+        <input
+          type="text" class="form-control"
+          (keyup.enter)="addTopic(topic)" #topic>
+        <ul class="list-group">
+          <li *ngFor="let topic of topics.controls" (click)="removeTopic(topic)" class="list-group-item">
+            {{ topic.value }}
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</div>
